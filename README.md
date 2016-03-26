@@ -1,5 +1,5 @@
 # FLP-DKA-2-MKA-test
-expects dka-2-mka.sh in parent dir
+expects dka-2-mka.hs in parent dir
 
     make prepare # precompile tests
     make # run tests
