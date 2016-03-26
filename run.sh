@@ -8,12 +8,12 @@ function compareFsm
 {
 	input=$1
 	minimal=${input/plain/minimal/}
-	compiled=${input/plain/compiled/}
+	original=${input/plain/original/}
 	res=${input/plain/res/}
 
 	../dka-2-mka -i $input > $res.plain
 	./fstcompile.sh $res.plain $res.plain.fst
-	fstisomorphic $res.plain.fst $compiled 
+	fstisomorphic $res.plain.fst $original 
 
 	if [ $? -eq 0 ] ; then
 		st="\033[1;32mPASS\033[0m"
